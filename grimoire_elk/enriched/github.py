@@ -679,7 +679,7 @@ class GitHubEnrich(Enrich):
         rich_issue['github_repo'] = rich_issue['repository'].replace(GITHUB, '')
         rich_issue['github_repo'] = re.sub('.git$', '', rich_issue['github_repo'])
         rich_issue["url_id"] = rich_issue['github_repo'] + "/issues/" + rich_issue['id_in_repo']
-        rich_issue['body'] = issue['body']
+        # rich_issue['body'] = issue['body']
 
         if self.prjs_map:
             rich_issue.update(self.get_item_project(rich_issue))
@@ -729,7 +729,7 @@ class GitHubEnrich(Enrich):
                 rich_releases_dict['target_commitish'] = release['target_commitish']
                 rich_releases_dict['prerelease'] = release['prerelease']
                 rich_releases_dict['name'] = release['name']
-                rich_releases_dict['body'] = ''
+                # rich_releases_dict['body'] = release['body']
                 rich_releases_dict['created_at'] = release['created_at']
                 release_author = release['author']
                 rich_releases_author_dict = {}
