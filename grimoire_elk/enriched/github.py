@@ -723,7 +723,7 @@ class GitHubEnrich(Enrich):
         rich_repo['fetched_on'] = repo['fetched_on']
         rich_repo['url'] = repo['html_url']
         rich_repo['archived'] = repo['archived']
-        rich_repo['archivedAt'] = repo.get('archivedAt')
+        rich_repo['archived_at'] = repo.get('archivedAt')
         rich_repo['created_at'] = repo['created_at']
         rich_repo['updated_at'] = repo['updated_at']
 
